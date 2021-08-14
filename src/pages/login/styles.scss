@@ -1,0 +1,93 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+
+.login-form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  img {
+    width: 108px;
+    height: 84px;
+  }
+
+  h1 {
+    color: #474f63;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    width: 420px;
+    text-align: center;
+    margin: 32px 0;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    margin: 6px 0;
+
+    span {
+      margin-left: 8px;
+      color: #3b3f49;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
+    }
+  }
+  .no-account {
+    font-size: 17px;
+    line-height: 20px;
+    margin: 12px 0px;
+    color: #6e778d;
+    .sign-up {
+      color: #0ec3a3;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
+  .copyright {
+    position: absolute;
+    color: #c6cad6;
+    bottom: 2.5%;
+  }
+}
+
+.about {
+  width: 50vw;
+  background: linear-gradient(0deg, #0ea4c2 0%, #13cfb9 100%);
+  border-radius: 64px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  img {
+    width: 420px;
+    height: 335px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    max-width: 420px;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0 auto;
+  }
+  span {
+    max-width: 420px;
+    flex-wrap: wrap;
+    margin: 8px auto 0 auto;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
