@@ -1,0 +1,25 @@
+.input-component {
+  position: relative;
+  input {
+    padding: 12px 16px;
+    width: 400px;
+    height: 22px;
+    margin: 4px 0px;
+    border: 1px solid #ced4de;
+    border-radius: 4px;
+    outline: none;
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: #c6cad6;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: gray;
+    }
+  }
+}
