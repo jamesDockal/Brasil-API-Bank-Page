@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../components/button";
 import Input from "../../components/input";
-import I from "../../images/i.png";
+import I from "../../images/bluelogo.png";
 import Frame from "../../images/Frame.png";
 import "./styles.scss";
 
