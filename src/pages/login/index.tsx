@@ -22,7 +22,7 @@ export default function Login() {
           <Input placeholder="Placeholder" icon="far fa-calendar" />
         </div>
 
-        <Button text="Entrar" />
+        <Button size="big" text="Entrar" />
         <div className="no-account">
           <small>Não tem uma conta? </small>
           <small className="sign-up">Cadastre-se</small>
