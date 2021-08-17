@@ -14,12 +14,12 @@ export default function Login() {
 
         <div className="input email">
           <span>E-mail</span>
-          <Input name="email" placeholder="Placeholder" />
+          <Input size="big" name="email" placeholder="Placeholder" />
         </div>
 
         <div className="input password">
           <span>Senha</span>
-          <Input placeholder="Placeholder" icon="far fa-calendar" />
+          <Input size="big" placeholder="Placeholder" icon="far fa-calendar" />
         </div>
 
         <Button size="big" text="Entrar" />
