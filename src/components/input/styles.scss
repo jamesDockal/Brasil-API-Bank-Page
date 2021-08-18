@@ -7,23 +7,35 @@
     border: 2px solid #ced4de;
     border-radius: 6px;
     outline: none;
-
     font-size: 14px;
     line-height: 20px;
-    // color: #b3b9c9;
+  }
+  .big-input {
+    width: 400px;
+  }
+  .medium-input {
+    width: 350px;
   }
   i {
     position: absolute;
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
-    // color: #c6cad6;
     color: #555;
     font-size: 24px;
     cursor: pointer;
 
     &:hover {
       color: gray;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .input-component {
+    .big-input,
+    .medium-input {
+      width: 300px;
     }
   }
 }
