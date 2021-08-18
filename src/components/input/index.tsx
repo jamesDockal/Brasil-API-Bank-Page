@@ -14,7 +14,7 @@ export default function Input({ placeholder, icon, name, size }: InputProps) {
   return (
     <div className="input-component">
       <input
-        style={{ width: size == "big" ? "400px" : "300px" }}
+        style={{ width: size == "big" ? "400px" : "350px" }}
         name={name}
         type="text"
         placeholder={placeholder}

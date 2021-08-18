@@ -5,12 +5,24 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #ced4de;
+  margin-bottom: 16px;
 
-  h1 {
-    color: #b3b9c9;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 32px;
+  .page-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    i {
+      color: #b3b9c9;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    h1 {
+      color: #b3b9c9;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
 
   .user-actions {

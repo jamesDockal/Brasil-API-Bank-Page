@@ -6,18 +6,23 @@ type HeaderProps = {
   title: string;
   buttonTitle: string;
   buttonIcon: string;
+  back?: boolean;
 };
 
 export default function Header({
   title,
   buttonTitle,
   buttonIcon,
+  back,
 }: HeaderProps) {
   return (
     <div className="page-header">
-      <h1> {title}</h1>
+      <div className="page-title">
+        {back && <i className="fas fa-chevron-left" />}
+        <h1>{title}</h1>
+      </div>
       <div className="user-actions">
-        <Button size="small" text={buttonTitle} icon="fas fa-plus" />
+        <Button size="small" text={buttonTitle} icon={buttonIcon} />
         <div className="bell">
           <i className="far fa-bell"></i>
           <div className="ball" />
