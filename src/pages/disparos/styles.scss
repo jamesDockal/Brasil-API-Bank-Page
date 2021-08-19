@@ -1,8 +1,38 @@
 .home-page {
   display: flex;
   background-color: #e5e5e5;
-
   .home-content {
     margin-left: 92px;
+
+    .home-header {
+      .square-logo {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .home-page {
+    display: relative;
+    width: 100vw;
+    .side-bar {
+      display: none;
+    }
+    .home-content {
+      margin-left: 16px;
+
+      .home-header {
+        .square-logo {
+          display: block;
+          position: fixed;
+          left: 0;
+          background-color: red;
+          width: 75px;
+          height: 75px;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

@@ -15,6 +15,7 @@ type BankType = {
 
 export default function AllBanks() {
   const [banks, setBanks] = useState<BankType[]>([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     setBanks(mockBanks());
@@ -29,13 +30,15 @@ export default function AllBanks() {
         </div>
         <div>
           <Input
+            state={search}
+            setState={setSearch}
             size="medium"
             placeholder="Digite o nome do banco"
             icon="fas fa-search"
           />
         </div>
       </header>
-      <main>
+      <main className="bank-card-container">
         {banks.map((bank) => (
           <BankCard bank={bank} />
         ))}

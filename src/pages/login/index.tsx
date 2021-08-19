@@ -1,25 +1,60 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import Button from "../../components/button";
 import Input from "../../components/input";
 import I from "../../images/bluelogo.png";
 import Frame from "../../images/Frame.png";
 import "./styles.scss";
 
+import { useHistory } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../store/login/actions";
+
 export default function Login() {
+  const reduxState = useSelector((state: any) => state);
+  const history = useHistory();
+
+  // if user is alredy logged
+  if (reduxState.data.user) history.push("/disparos");
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  function submitHandle(e: FormEvent) {
+    e.preventDefault();
+
+    // login user
+    dispatch(login(email, password));
+  }
+
   return (
     <div className="login-page">
-      <div className="login-form">
+      <form onSubmit={(e) => submitHandle(e)} className="login-form">
         <img src={I} alt="I" />
         <h1>Dispare mensagens quando e para quem você quiser.</h1>
 
         <div className="input email">
           <span>E-mail</span>
-          <Input size="big" name="email" placeholder="Placeholder" />
+          <Input
+            state={email}
+            setState={setEmail}
+            size="big"
+            name="email"
+            placeholder="Placeholder"
+          />
         </div>
 
         <div className="input password">
           <span>Senha</span>
-          <Input size="big" placeholder="Placeholder" icon="far fa-calendar" />
+          <Input
+            state={password}
+            setState={setPassword}
+            size="big"
+            placeholder="Placeholder"
+            icon="far fa-calendar"
+            type="password"
+          />
         </div>
 
         <Button size="big" text="Entrar" />
@@ -33,7 +68,7 @@ export default function Login() {
             reserved.
           </span>
         </div>
-      </div>
+      </form>
       <div className="about">
         <img src={Frame} alt="Frame" />
         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>

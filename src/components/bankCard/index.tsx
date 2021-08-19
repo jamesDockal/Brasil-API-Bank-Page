@@ -36,7 +36,7 @@ export default function BankCard({ bank }: BankCardProps) {
           <i className="fas fa-users"></i>
           {bank.personCount}
         </div>
-        <i className="fas fa-ellipsis-v" />
+        <i className="fas fa-ellipsis-v ellipsis" />
       </header>
       <main className="card-main">
         <div className="megaphone">
@@ -44,7 +44,7 @@ export default function BankCard({ bank }: BankCardProps) {
         </div>
         <div className="bank-info">
           <span>{bank.title}</span>
-          <span>IFSB: {bank.ispb}</span>
+          <span className="ifsb">IFSB: {bank.ispb}</span>
         </div>
       </main>
     </div>

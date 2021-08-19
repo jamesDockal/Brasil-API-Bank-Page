@@ -57,7 +57,7 @@
     .ellipsis {
       cursor: pointer;
       color: #555;
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 
@@ -90,6 +90,23 @@
       color: #333;
       font-weight: 500;
       cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .bank-card {
+    padding: 0px 16px;
+    .card-main {
+      margin-bottom: 16px;
+      .megaphone {
+        margin-left: 0;
+      }
+      .bank-info {
+        .ifsb {
+          display: none;
+        }
+      }
     }
   }
 }
