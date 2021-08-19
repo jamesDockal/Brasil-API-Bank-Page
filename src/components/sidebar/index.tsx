@@ -3,7 +3,16 @@ import Logo from "../../images/whitelogo.png";
 
 import "./styles.scss";
 
+import { useDispatch } from "react-redux";
+import { logOut } from "../../store/login/actions";
+
 export default function Sidebar() {
+  const dispatch = useDispatch();
+
+  function logUserOut() {
+    dispatch(logOut());
+  }
+
   return (
     <div className="sidebar">
       <img src={Logo} alt="logo" />
@@ -13,7 +22,12 @@ export default function Sidebar() {
         <i className="material-icons-outlined ui">people</i>
         <i className="material-icons-outlined ui">person_outline</i>
       </div>
-      <span className="material-icons-outlined logout ">logout</span>
+      <span
+        onClick={() => logUserOut()}
+        className="material-icons-outlined logout "
+      >
+        logout
+      </span>
     </div>
   );
 }

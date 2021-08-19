@@ -5,7 +5,17 @@ import Sidebar from "../../components/sidebar";
 import SquareLogo from "../../images/squarelogo.png";
 import "./styles.scss";
 
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+
 export default function Disparos() {
+  const reduxState = useSelector((state: any) => state);
+  const history = useHistory();
+
+  console.log("reduxState", reduxState);
+
+  if (!reduxState.data.user) history.push("/login");
+
   return (
     <div className="home-page">
       <div className="side-bar">

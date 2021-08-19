@@ -1,6 +1,14 @@
+import cookies from "js-cookie";
+
+function getLoggedUser() {
+  const user = cookies.get("user");
+  console.log("cookie user", user);
+  return user;
+}
+
 let INITIAL_STATE = {
   data: {
-    user: "",
+    user: getLoggedUser(),
   },
 };
 
@@ -14,10 +22,20 @@ export default function loginReducer(
 ) {
   switch (action.type) {
     case "LOGIN":
+      cookies.set("user", "user");
       return {
         ...state,
         data: {
           user: "user",
+        },
+      };
+    case "LOGOUT":
+      cookies.remove("user");
+
+      return {
+        ...state,
+        data: {
+          user: "",
         },
       };
     default:

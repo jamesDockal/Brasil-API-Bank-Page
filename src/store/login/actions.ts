@@ -4,3 +4,9 @@ export function login(email: string, password: string) {
     payload: { email, password },
   };
 }
+
+export function logOut() {
+  return {
+    type: "LOGOUT",
+  };
+}
