@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Brasil-API-Bank-Page/static/css/main.4b92e8eb.chunk.css",
+    "main.js": "/Brasil-API-Bank-Page/static/js/main.9056b5b5.chunk.js",
+    "main.js.map": "/Brasil-API-Bank-Page/static/js/main.9056b5b5.chunk.js.map",
+    "runtime-main.js": "/Brasil-API-Bank-Page/static/js/runtime-main.a4d63ac1.js",
+    "runtime-main.js.map": "/Brasil-API-Bank-Page/static/js/runtime-main.a4d63ac1.js.map",
+    "static/js/2.a98c5768.chunk.js": "/Brasil-API-Bank-Page/static/js/2.a98c5768.chunk.js",
+    "static/js/2.a98c5768.chunk.js.map": "/Brasil-API-Bank-Page/static/js/2.a98c5768.chunk.js.map",
+    "index.html": "/Brasil-API-Bank-Page/index.html",
+    "static/css/main.4b92e8eb.chunk.css.map": "/Brasil-API-Bank-Page/static/css/main.4b92e8eb.chunk.css.map",
+    "static/js/2.a98c5768.chunk.js.LICENSE.txt": "/Brasil-API-Bank-Page/static/js/2.a98c5768.chunk.js.LICENSE.txt",
+    "static/media/Frame.f3ad891c.png": "/Brasil-API-Bank-Page/static/media/Frame.f3ad891c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4d63ac1.js",
+    "static/js/2.a98c5768.chunk.js",
+    "static/css/main.4b92e8eb.chunk.css",
+    "static/js/main.9056b5b5.chunk.js"
+  ]
+}
