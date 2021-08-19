@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Brasil-API-Bank-Page/static/css/main.4b92e8eb.chunk.css",
-    "main.js": "/Brasil-API-Bank-Page/static/js/main.bda94021.chunk.js",
-    "main.js.map": "/Brasil-API-Bank-Page/static/js/main.bda94021.chunk.js.map",
+    "main.js": "/Brasil-API-Bank-Page/static/js/main.4be1268a.chunk.js",
+    "main.js.map": "/Brasil-API-Bank-Page/static/js/main.4be1268a.chunk.js.map",
     "runtime-main.js": "/Brasil-API-Bank-Page/static/js/runtime-main.a4d63ac1.js",
     "runtime-main.js.map": "/Brasil-API-Bank-Page/static/js/runtime-main.a4d63ac1.js.map",
-    "static/js/2.ef6649ad.chunk.js": "/Brasil-API-Bank-Page/static/js/2.ef6649ad.chunk.js",
-    "static/js/2.ef6649ad.chunk.js.map": "/Brasil-API-Bank-Page/static/js/2.ef6649ad.chunk.js.map",
+    "static/js/2.2a791f1f.chunk.js": "/Brasil-API-Bank-Page/static/js/2.2a791f1f.chunk.js",
+    "static/js/2.2a791f1f.chunk.js.map": "/Brasil-API-Bank-Page/static/js/2.2a791f1f.chunk.js.map",
     "index.html": "/Brasil-API-Bank-Page/index.html",
     "static/css/main.4b92e8eb.chunk.css.map": "/Brasil-API-Bank-Page/static/css/main.4b92e8eb.chunk.css.map",
-    "static/js/2.ef6649ad.chunk.js.LICENSE.txt": "/Brasil-API-Bank-Page/static/js/2.ef6649ad.chunk.js.LICENSE.txt",
+    "static/js/2.2a791f1f.chunk.js.LICENSE.txt": "/Brasil-API-Bank-Page/static/js/2.2a791f1f.chunk.js.LICENSE.txt",
     "static/media/Frame.f3ad891c.png": "/Brasil-API-Bank-Page/static/media/Frame.f3ad891c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a4d63ac1.js",
-    "static/js/2.ef6649ad.chunk.js",
+    "static/js/2.2a791f1f.chunk.js",
     "static/css/main.4b92e8eb.chunk.css",
-    "static/js/main.bda94021.chunk.js"
+    "static/js/main.4be1268a.chunk.js"
   ]
 }
