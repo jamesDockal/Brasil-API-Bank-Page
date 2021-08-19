@@ -13,6 +13,7 @@ function App() {
           <Route exact path="/disparos" component={Disparos} />
           <Route path="/disparos/detalhes/:code" component={DisparoDetails} />
           <Route exact path="/login" component={Login} />
+          <Route path="*" component={Disparos} />
         </Switch>
       </BrowserRouter>
     </div>
