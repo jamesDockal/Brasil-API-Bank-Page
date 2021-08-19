@@ -1,9 +1,11 @@
-import { Provider } from "react-redux";
+import { createStore, combineReducers } from "redux";
 
-import { createStore } from "redux";
+import authReducer from "./auth";
 
-import loginReducer from "./login";
+const combinedReducers = combineReducers({
+  auth: authReducer,
+});
 
-const store = createStore(loginReducer);
+const store = createStore(combinedReducers);
 
 export default store;

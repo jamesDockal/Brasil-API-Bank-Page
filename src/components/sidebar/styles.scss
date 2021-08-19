@@ -28,6 +28,15 @@
     .ui {
       transform: scale(1.6);
     }
+
+    .actived::after {
+      content: "";
+      height: 36px;
+      width: 2.5px;
+      background-color: white;
+      position: absolute;
+      left: 1%;
+    }
   }
 
   .logout {

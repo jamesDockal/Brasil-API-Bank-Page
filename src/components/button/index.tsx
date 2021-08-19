@@ -11,7 +11,7 @@ export default function Button({ text, icon, size }: ButtonProps) {
   return (
     <button className={`${size} button-component`}>
       {icon && <i className={icon} />}
-      <span> {text}</span>
+      <span>{text}</span>
     </button>
   );
 }

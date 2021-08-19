@@ -2,6 +2,8 @@ import React from "react";
 import Button from "../button";
 import "./styles.scss";
 
+import { useHistory } from "react-router-dom";
+
 type HeaderProps = {
   title: string;
   buttonTitle: string;
@@ -15,10 +17,18 @@ export default function Header({
   buttonIcon,
   back,
 }: HeaderProps) {
+  const history = useHistory();
+
+  function goToBackPage() {
+    history.push("/disparos");
+  }
+
   return (
     <div className="page-header">
       <div className="page-title">
-        {back && <i className="fas fa-chevron-left" />}
+        {back && (
+          <i onClick={() => goToBackPage()} className="fas fa-chevron-left" />
+        )}
         <h1>{title}</h1>
       </div>
       <div className="user-actions">

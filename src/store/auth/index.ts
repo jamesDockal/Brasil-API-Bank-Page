@@ -1,25 +1,11 @@
 import cookies from "js-cookie";
-
-function getLoggedUser() {
-  const user = cookies.get("user");
-  console.log("cookie user", user);
-  return user;
-}
-
-let INITIAL_STATE = {
-  data: {
-    user: getLoggedUser(),
-  },
-};
+import INITIAL_STATE from "../initialState";
 
 type ActionType = {
   type: string;
 };
 
-export default function loginReducer(
-  state = INITIAL_STATE,
-  action: ActionType
-) {
+export default function authReducer(state = INITIAL_STATE, action: ActionType) {
   switch (action.type) {
     case "LOGIN":
       cookies.set("user", "user");

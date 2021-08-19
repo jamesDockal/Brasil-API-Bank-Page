@@ -8,14 +8,14 @@ import "./styles.scss";
 import { useHistory } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../store/login/actions";
+import { login } from "../../store/auth/actions";
 
 export default function Login() {
   const reduxState = useSelector((state: any) => state);
   const history = useHistory();
 
   // if user is alredy logged
-  if (reduxState.data.user) history.push("/disparos");
+  if (reduxState.auth.data.user) history.push("/disparos");
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

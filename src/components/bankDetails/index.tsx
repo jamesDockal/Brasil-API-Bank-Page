@@ -1,7 +1,25 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./styles.scss";
 
-export default function BankDetails() {
+type BankType = {
+  personCount: number;
+  name: string;
+  ispb: string;
+  code: string;
+  fullName: string;
+};
+
+type Params = {
+  code: string;
+};
+
+type BankDetailsPros = {
+  bank?: BankType;
+  errorMessage: string;
+};
+
+export default function BankDetails({ bank, errorMessage }: BankDetailsPros) {
   const [messages, setMessages] = useState<any[]>([]);
 
   useEffect(() => {
@@ -15,32 +33,38 @@ export default function BankDetails() {
   }, []);
 
   return (
-    <div className="bank-details">
-      <header className="details-header">
-        <h1>Detalhes do Banco</h1>
-        <div className="bank-info">
-          <section>
-            <strong>Nome do Banco</strong>
-            <span>Nome do Titulo</span>
-          </section>
-          <section>
-            <strong>Codigo do Banco</strong>
-            <span>22/03/2021</span>
-          </section>
-          <section>
-            <strong>ISPB</strong>
-            <span>08:30</span>
-          </section>
+    <>
+      {errorMessage ? (
+        <strong>{errorMessage}</strong>
+      ) : (
+        <div className="bank-details">
+          <header className="details-header">
+            <h1>Detalhes do Banco</h1>
+            <div className="bank-info">
+              <section>
+                <strong>{bank?.fullName}</strong>
+                <span>{bank?.name}</span>
+              </section>
+              <section>
+                <strong>{bank?.code}</strong>
+                <span>22/03/2021</span>
+              </section>
+              <section>
+                <strong>{bank?.ispb}</strong>
+                <span>08:30</span>
+              </section>
+            </div>
+          </header>
+          <main className="details-main">
+            {messages.map((message, index) => (
+              <section key={index}>
+                <strong>Mensagem {index + 1}</strong>
+                <span>{message}</span>
+              </section>
+            ))}
+          </main>
         </div>
-      </header>
-      <main className="details-main">
-        {messages.map((message, index) => (
-          <section key={index}>
-            <strong>Mensagem {index + 1}</strong>
-            <span>{message}</span>
-          </section>
-        ))}
-      </main>
-    </div>
+      )}
+    </>
   );
 }

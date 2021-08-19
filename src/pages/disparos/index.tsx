@@ -12,9 +12,7 @@ export default function Disparos() {
   const reduxState = useSelector((state: any) => state);
   const history = useHistory();
 
-  console.log("reduxState", reduxState);
-
-  if (!reduxState.data.user) history.push("/login");
+  if (!reduxState.auth.data.user) history.push("/login");
 
   return (
     <div className="home-page">

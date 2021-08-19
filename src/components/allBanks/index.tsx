@@ -1,24 +1,27 @@
 import React, { useState, useEffect } from "react";
-import BankUtils from "../../utils/Bank";
 import BankCard from "../bankCard";
 import Input from "../input";
 import "./styles.scss";
-
-const { mockBanks } = new BankUtils();
+import axios from "axios";
 
 type BankType = {
   personCount: number;
-  title: string;
+  name: string;
   ispb: string;
-  date: string;
+  code: string;
 };
 
 export default function AllBanks() {
   const [banks, setBanks] = useState<BankType[]>([]);
   const [search, setSearch] = useState("");
-
   useEffect(() => {
-    setBanks(mockBanks());
+    async function getAllBanks() {
+      const { data } = await axios.get("https://brasilapi.com.br/api/banks/v1");
+      setBanks(data);
+      console.log("banks", data);
+    }
+
+    getAllBanks();
   }, []);
 
   return (
@@ -39,8 +42,8 @@ export default function AllBanks() {
         </div>
       </header>
       <main className="bank-card-container">
-        {banks.map((bank) => (
-          <BankCard bank={bank} />
+        {banks.map((bank, index) => (
+          <BankCard index={index} bank={bank} />
         ))}
       </main>
     </div>
